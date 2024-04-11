@@ -24,7 +24,7 @@ add_routes(
     path="/openai"
 )
 modelopenai=ChatOpenAI()
-#ollama llama2
+#ollama gemma
 gemmallm=Ollama(model="gemma")
 
 prompt1=ChatPromptTemplate.from_template("Write me an essay about {topic} with 50 words")
