@@ -25,8 +25,8 @@ prompt=ChatPromptTemplate.from_messages(
 st.title('Langchain With OPENAI API')
 input_text=st.text_input("Search the topic as you want")
 
-# ollama LLAma2 LLm 
-llm=Ollama(model="llama2")
+# ollama Gemma LLm 
+llm=ollama(model="gemma")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
