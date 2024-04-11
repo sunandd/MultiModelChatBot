@@ -22,7 +22,7 @@ prompt=ChatPromptTemplate.from_messages(
 
 # streamlit framework
 
-st.title('Langchain With OPENAI API')
+st.title('Langchain With Local Gemma Chatbot')
 input_text=st.text_input("Search the topic as you want")
 
 # ollama Gemma LLm 
