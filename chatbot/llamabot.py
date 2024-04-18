@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain_community.llms import ollama
+from langchain_community.llms import Ollama
 import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -22,11 +22,11 @@ prompt=ChatPromptTemplate.from_messages(
 
 # streamlit framework
 
-st.title('Langchain With Local Gemma Chatbot')
+st.title('Langchain With Local Llama2 Chatbot')
 input_text=st.text_input("Search the topic as you want")
 
-# ollama Gemma LLm 
-llm=ollama(model="gemma")
+# ollama Llma2 LLm 
+llm=Ollama(model="Llama2")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 

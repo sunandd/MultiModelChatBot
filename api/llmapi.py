@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from langchain.prompts import ChatPromptTemplate
-from langchain.chat_models import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_openai import ChatOpenAI
 from langserve import add_routes
 import uvicorn
 import os
@@ -25,7 +25,7 @@ add_routes(
 )
 modelopenai=ChatOpenAI()
 #ollama gemma
-gemmallm=Ollama(model="gemma")
+gemmallm=Ollama(model="Llama2")
 
 prompt1=ChatPromptTemplate.from_template("Write me an essay about {topic} with 50 words")
 prompt2=ChatPromptTemplate.from_template("Write me an poem about {topic} for a 5 years child with 50 words")

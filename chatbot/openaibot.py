@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"]=os.getenv("OPENAI_API_KEY")
-## Langmith tracking
+# Langmith tracking
 os.environ["LANGCHAIN_TRACING_V2"]="true"
 os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
 
-## Prompt Template
+# Prompt Template
 
 prompt=ChatPromptTemplate.from_messages(
     [
@@ -22,10 +22,10 @@ prompt=ChatPromptTemplate.from_messages(
     ]
 )
 
-## streamlit framework
+# streamlit framework
 
 st.title('Langchain With OPENAI API')
-input_text=st.text_input("Search the topic as you want")
+input_text=st.text_input("What do you want to know")
 
 # openAI LLm 
 llm=ChatOpenAI(model="gpt-3.5-turbo")
